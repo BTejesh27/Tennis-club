@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tennis Live Score</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #live-score {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Tennis Live Score</h1>
+  <div id="live-score">Loading...</div>
+
+  <script>
+    // Simulating live scores with JavaScript
+    function updateLiveScore() {
+      const scoreElement = document.getElementById('live-score');
+      const players = ['Player A', 'Player B'];
+      const score = [0, 0];
+
+      setInterval(() => {
+        // Simulate scoring
+        const randomPlayer = Math.floor(Math.random() * 2);
+        score[randomPlayer]++;
+
+        // Update the live score display
+        scoreElement.textContent = `${players[0]} ${score[0]} - ${score[1]} ${players[1]}`;
+      }, 1000); // Update every 3 seconds (you can adjust the interval)
+    }
+
+    // Call the function to start updating the live score
+    updateLiveScore();
+  </script>
+
+</body>
+
+</html>
