@@ -149,40 +149,38 @@ th::after {
 
 
     
-    <table style="margin: 80px auto;">
-            <tr>
-                <th>GENE1</th>
-                <th>GENE2</th>
-                <th>predict_gi</th>
-                <th>MAX</th>
-            </tr>
 
-            <?php
-            include 'connect.php';
+        <table>
+                            <thead>
+                                <tr>
+                                    <th>profile</th>
+                                    <th>Player ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Club</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                include 'connect.php';
 
+                                $sql = "SELECT * FROM players_d WHERE club1='club3'";
+                                $result = mysqli_query($conn, $sql);
 
-            
-                $sql = "SELECT * FROM `data2` WHERE c='NOT' ";
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo "<tr>";
+                                    echo "<td>{$row['playerid']}</td>";
+                                    echo "<td>{$row['playerid']}</td>";
+                                    echo "<td>{$row['firstname']}</td>";
+                                    echo "<td>{$row['lastname']}</td>";
+                                    echo "<td>{$row['club1']}</td>";
+                                    echo "</tr>";
+                                }
 
-                $result = $conn->query($sql);
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<tr>";
-                        echo "<td>" . $row["a"] . "</td>";
-                        echo "<td>" . $row["b"] . "</td>";
-                        echo "<td>" . $row["c"] . "</td>";
-                        echo "<td>" . $row["d"] . "</td>";
-                        echo "</tr>";
-                    }
-                } else {
-                    echo "<tr><td colspan='4'>0 results</td></tr>";
-                }
-           
-
-            $conn->close();
-            ?>
-
-        </table>
+                                mysqli_close($conn);
+                                ?>
+                            </tbody>
+                        </table>
    
    
  
