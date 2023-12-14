@@ -28,6 +28,58 @@
   <link rel="stylesheet" href="css/style.css">
 
 
+  <style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    th {
+    position: relative;
+    background-color: #fff;
+    color: black;
+}
+
+th::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 1px;
+    background-color: black; /* You can change the color as needed */
+}
+
+    tr {
+        border-bottom: 1px solid #3498db; /* Add underline to entire row */
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #ffffff;
+    }
+
+    a {
+        text-decoration: none;
+        color: #3498db;
+    }
+
+    a:hover {
+        color: #2980b9;
+    }
+</style>
+
 
 </head>
 
@@ -94,8 +146,41 @@
       </div> -->
     </div>
 
+
+
     
-    
+
+        <table>
+                            <thead>
+                                <tr>
+                                    <th>profile</th>
+                                    <th>Player ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Club</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                include 'connect.php';
+
+                                $sql = "SELECT * FROM players_d WHERE club1='club3'";
+                                $result = mysqli_query($conn, $sql);
+
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo "<tr>";
+                                    echo "<td>{$row['playerid']}</td>";
+                                    echo "<td>{$row['playerid']}</td>";
+                                    echo "<td>{$row['firstname']}</td>";
+                                    echo "<td>{$row['lastname']}</td>";
+                                    echo "<td>{$row['club1']}</td>";
+                                    echo "</tr>";
+                                }
+
+                                mysqli_close($conn);
+                                ?>
+                            </tbody>
+                        </table>
    
    
  
