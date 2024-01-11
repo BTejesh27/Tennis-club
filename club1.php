@@ -130,25 +130,21 @@ th::after {
 
     </header>
 
-    <div class="hero overlay" style="background-image: url('images/bg_3.jpg');">
-      <!-- <div class="container">
+    <div class="hero overlay" style="background-image: url('images/bg_3.jpg'); display: flex; justify-content: center; align-items: center; height: 100vh;">
+   
+
+    <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-5 ml-auto">
-            <h1 class="text-white">World Cup Event</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, molestias repudiandae pariatur.</p>
-            <div id="date-countdown"></div>
-            <p>
-              <a href="#" class="btn btn-primary py-3 px-4 mr-3">Book Ticket</a>
-              <a href="#" class="more light">Learn More</a>
-            </p>  
+          <div class="col-lg-5 mx-auto text-center">
+            <h1 class="text-white">Club 1</h1>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
 
 
 
-    
+<!--     
     <table>
                             <thead>
                                 <tr>
@@ -192,12 +188,55 @@ th::after {
                                 mysqli_close($conn);
                                 ?>
                             </tbody>
-                        </table>
+                        </table> -->
    
    
  
     
-        
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>profile</th>
+                                    <th>Player ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Matches</th>
+                                    <th>score</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                include 'connect.php';
+
+                                $sql = "SELECT 
+                                players_d.playerid, 
+                                players_d.firstname, 
+                                players_d.lastname, 
+                                player_score.mat, 
+                                player_score.score
+                            FROM players_d
+                            LEFT JOIN player_score ON players_d.playerid = player_score.playerid
+                            WHERE players_d.club1 = 'Club1'";
+
+                                $result = mysqli_query($conn, $sql);
+
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo "<tr>";
+                                    echo "<td>{$row['playerid']}</td>";
+                                    echo "<td>{$row['playerid']}</td>";
+                                    echo "<td>{$row['firstname']}</td>";
+                                    echo "<td>{$row['lastname']}</td>";
+                                    echo "<td>{$row['mat']}</td>";
+                                    echo "<td>{$row['score']}</td>";
+                                   
+                                    echo "</tr>";
+                                }
+
+                                mysqli_close($conn);
+                                ?>
+                            </tbody>
+                        </table>
     
 
 

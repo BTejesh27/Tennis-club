@@ -27,24 +27,59 @@
 
   <link rel="stylesheet" href="css/style.css">
 
- <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
+  <style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+    }
 
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
+    th,
+    td {
+        padding: 10px;
+        text-align: center;
+    }
 
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    th {
+    position: relative;
+    background-color: #fff;
+    color: black;
+}
+
+th::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 1px;
+    background-color: black; /* You can change the color as needed */
+}
+
+    tr {
+        border-bottom: 1px solid #3498db; /* Add underline to entire row */
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #ffffff;
+    }
+
+    a {
+        text-decoration: none;
+        color: #3498db;
+    }
+
+    a:hover {
+        color: #2980b9;
+    }
+</style>
+
+
 
 </head>
 
@@ -107,9 +142,59 @@
       </div>
     </div>
 
+    <table>
+                            <thead>
+                                <tr>
+                                    <th>profile</th>
+                                    <th>Player ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Club1</th>
+                                    <th>Club2</th>
+                                    <th>Club3</th>
+                                    <th>matches</th>
+                                    <th>scores</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                include 'connect.php';
+
+                                $sql = "SELECT 
+                                           players_d.playerid, 
+                                           players_d.firstname, 
+                                           players_d.lastname, 
+                                           players_d.club1, 
+                                           players_d.club2, 
+                                           players_d.club3, 
+                                           player_score.mat, 
+                                           player_score.score
+                                           FROM players_d
+                                           LEFT JOIN player_score ON players_d.playerid = player_score.playerid";
+
+                                $result = mysqli_query($conn, $sql);
+
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo "<tr>";
+                                    echo "<td>{$row['playerid']}</td>";
+                                    echo "<td>{$row['playerid']}</td>";
+                                    echo "<td>{$row['firstname']}</td>";
+                                    echo "<td>{$row['lastname']}</td>";
+                                    echo "<td>{$row['club1']}</td>";
+                                    echo "<td>{$row['club2']}</td>";
+                                    echo "<td>{$row['club3']}</td>";
+                                    echo "<td>{$row['mat']}</td>";
+                                    echo "<td>{$row['score']}</td>";                                  
+                                    
+                                    echo "</tr>";
+                                }
+
+                                mysqli_close($conn);
+                                ?>
+                            </tbody>
+                        </table>
     
-    
-    <div class="site-section">
+    <!-- <div class="site-section">
       <div class="container">
         <div class="row">
           <div class="col-6 title-section">
@@ -214,7 +299,7 @@
         </div>
 
       </div>
-    </div>
+    </div> -->
 
 
 <!--     
@@ -254,7 +339,7 @@
       </div>
     </div> -->
 
-    <table>
+    <!-- <table>
                             <thead>
                                 <tr>
                                     <th>profile</th>
@@ -304,7 +389,58 @@
                                 mysqli_close($conn);
                                 ?>
                             </tbody>
-                        </table>
+                        </table> -->
+                        <!-- <table>
+                            <thead>
+                                <tr>
+                                    <th>profile</th>
+                                    <th>Player ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Club1</th>
+                                    <th>Club2</th>
+                                    <th>Club3</th>
+                                    <th>matches</th>
+                                    <th>scores</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                include 'connect.php';
+
+                                $sql = "SELECT 
+                                           players_d.playerid, 
+                                           players_d.firstname, 
+                                           players_d.lastname, 
+                                           players_d.club1, 
+                                           players_d.club2, 
+                                           players_d.club3, 
+                                           player_score.mat, 
+                                           player_score.score
+                                           FROM players_d
+                                           LEFT JOIN player_score ON players_d.playerid = player_score.playerid";
+
+                                $result = mysqli_query($conn, $sql);
+
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo "<tr>";
+                                    echo "<td>{$row['playerid']}</td>";
+                                    echo "<td>{$row['playerid']}</td>";
+                                    echo "<td>{$row['firstname']}</td>";
+                                    echo "<td>{$row['lastname']}</td>";
+                                    echo "<td>{$row['club1']}</td>";
+                                    echo "<td>{$row['club2']}</td>";
+                                    echo "<td>{$row['club3']}</td>";
+                                    echo "<td>{$row['mat']}</td>";
+                                    echo "<td>{$row['score']}</td>";                                  
+                                    
+                                    echo "</tr>";
+                                }
+
+                                mysqli_close($conn);
+                                ?>
+                            </tbody>
+                        </table> -->
 
     <footer class="footer-section">
       <div class="container">
