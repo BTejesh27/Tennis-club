@@ -27,24 +27,7 @@
 
   <link rel="stylesheet" href="css/style.css">
 
- <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
 
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
 
 </head>
 
@@ -61,14 +44,13 @@
       <div class="site-mobile-menu-body"></div>
     </div>
 
-
+    
     <header class="site-navbar py-4" role="banner">
       <div class="container">
           <div class="d-flex align-items-center">
               <h3 style="margin-left: 20px;">
                   BHIMAVARAM TENNIS
               </h3>
-
 
       <!-- <div class="container">
         <div class="d-flex align-items-center">
@@ -81,9 +63,9 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="matches.html" class="nav-link">Matches</a></li>
-                <li class="active"><a href="players.php" class="nav-link">Players</a></li>
-            
+                <li class="active"><a href="matches.html" class="nav-link">Matches</a></li>
+                <li><a href="players.php" class="nav-link">Players</a></li>
+               
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
               </ul>
             </nav>
@@ -100,8 +82,8 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-5 mx-auto text-center">
-            <h1 class="text-white">Players</h1>
-            <p>Know about players and their score here.</p>
+            <h1 class="text-white">Matches</h1>
+            <p>You can get match details here.</p>
           </div>
         </div>
       </div>
@@ -109,11 +91,232 @@
 
     
     
+    <div class="container">
+      
+
+      <div class="row">
+        <div class="col-lg-12">
+          
+          <div class="d-flex team-vs">
+            <span class="score">4-1</span>
+            <div class="team-1 w-50">
+              <div class="team-details w-100 text-center">
+                <img src="images/logo_1.png" alt="Image" class="img-fluid">
+                <h3>LA LEGA <span>(win)</span></h3>
+                <ul class="list-unstyled">
+                  <li>Anja Landry (7)</li>
+                  <li>Eadie Salinas (12)</li>
+                  <li>Ashton Allen (10)</li>
+                  <li>Baxter Metcalfe (5)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="team-2 w-50">
+              <div class="team-details w-100 text-center">
+                <img src="images/logo_2.png" alt="Image" class="img-fluid">
+                <h3>JUVENDU <span>(loss)</span></h3>
+                <ul class="list-unstyled">
+                  <li>Macauly Green (3)</li>
+                  <li>Arham Stark (8)</li>
+                  <li>Stephan Murillo (9)</li>
+                  <li>Ned Ritter (5)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  
+   
+    
+ 
+    <div class="site-section bg-dark">
+      <div class="container">
+        
+        <div class="row mb-5">
+          <div class="col-lg-12">
+            <div class="widget-next-match">
+              <div class="widget-title">
+                <h3>Next Match</h3>
+              </div>
+              <div class="widget-body mb-3">
+                <div class="widget-vs">
+                  <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
+                    <div class="team-1 text-center">
+                      <img src="images/logo_1.png" alt="Image">
+                      <h3>Tennis League</h3>
+                    </div>
+                    <div>
+                      <span class="vs"><span>VS</span></span>
+                    </div>
+                    <div class="team-2 text-center">
+                      <img src="images/logo_2.png" alt="Image">
+                      <h3>Soccer</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center widget-vs-contents mb-4">
+                <h4>World Cup League</h4>
+                <p class="mb-5">
+                  <span class="d-block">December 20th, 2020</span>
+                  <span class="d-block">9:30 AM GMT+0</span>
+                  <strong class="text-primary">New Euro Arena</strong>
+                </p>
+
+                <div id="date-countdown2" class="pb-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 title-section">
+            <h2 class="heading">Upcoming Match</h2>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="bg-light p-4 rounded">
+              <div class="widget-body">
+                  <div class="widget-vs">
+                    <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
+                      <div class="team-1 text-center">
+                        <img src="images/logo_1.png" alt="Image">
+                        <h3>Tennis League</h3>
+                      </div>
+                      <div>
+                        <span class="vs"><span>VS</span></span>
+                      </div>
+                      <div class="team-2 text-center">
+                        <img src="images/logo_2.png" alt="Image">
+                        <h3>Soccer</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center widget-vs-contents mb-4">
+                  <h4>World Cup League</h4>
+                  <p class="mb-5">
+                    <span class="d-block">December 20th, 2020</span>
+                    <span class="d-block">9:30 AM GMT+0</span>
+                    <strong class="text-primary">New Euro Arena</strong>
+                  </p>
+
+                </div>
+              
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="bg-light p-4 rounded">
+              <div class="widget-body">
+                  <div class="widget-vs">
+                    <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
+                      <div class="team-1 text-center">
+                        <img src="images/logo_3.png" alt="Image">
+                        <h3>Tennis League</h3>
+                      </div>
+                      <div>
+                        <span class="vs"><span>VS</span></span>
+                      </div>
+                      <div class="team-2 text-center">
+                        <img src="images/logo_4.png" alt="Image">
+                        <h3>Soccer</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center widget-vs-contents mb-4">
+                  <h4>World Cup League</h4>
+                  <p class="mb-5">
+                    <span class="d-block">December 20th, 2020</span>
+                    <span class="d-block">9:30 AM GMT+0</span>
+                    <strong class="text-primary">New Euro Arena</strong>
+                  </p>
+
+                </div>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="bg-light p-4 rounded">
+              <div class="widget-body">
+                  <div class="widget-vs">
+                    <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
+                      <div class="team-1 text-center">
+                        <img src="images/logo_1.png" alt="Image">
+                        <h3>Tennis League</h3>
+                      </div>
+                      <div>
+                        <span class="vs"><span>VS</span></span>
+                      </div>
+                      <div class="team-2 text-center">
+                        <img src="images/logo_2.png" alt="Image">
+                        <h3>Soccer</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center widget-vs-contents mb-4">
+                  <h4>World Cup League</h4>
+                  <p class="mb-5">
+                    <span class="d-block">December 20th, 2020</span>
+                    <span class="d-block">9:30 AM GMT+0</span>
+                    <strong class="text-primary">New Euro Arena</strong>
+                  </p>
+
+                </div>
+              
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="bg-light p-4 rounded">
+              <div class="widget-body">
+                  <div class="widget-vs">
+                    <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
+                      <div class="team-1 text-center">
+                        <img src="images/logo_3.png" alt="Image">
+                        <h3>Tennis League</h3>
+                      </div>
+                      <div>
+                        <span class="vs"><span>VS</span></span>
+                      </div>
+                      <div class="team-2 text-center">
+                        <img src="images/logo_4.png" alt="Image">
+                        <h3>Soccer</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center widget-vs-contents mb-4">
+                  <h4>World Cup League</h4>
+                  <p class="mb-5">
+                    <span class="d-block">December 20th, 2020</span>
+                    <span class="d-block">9:30 AM GMT+0</span>
+                    <strong class="text-primary">New Euro Arena</strong>
+                  </p>
+
+                </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div> <!-- .site-section -->
+
     <div class="site-section">
       <div class="container">
         <div class="row">
           <div class="col-6 title-section">
-            <h2 class="heading">Star Players / Videos</h2>
+            <h2 class="heading">Videos</h2>
           </div>
           <div class="col-6 text-right">
             <div class="custom-nav">
@@ -134,8 +337,7 @@
                   <span class="icon-play"></span>
                 </span>
                 <div class="caption">
-                  <span class="meta">#10 / Forward</span>
-                  <h3 class="m-0">Phillip Hobbs</h3>
+                  <h3 class="m-0">Dogba set for Juvendu return?</h3>
                 </div>
               </a>
             </div>
@@ -148,8 +350,7 @@
                   <span class="icon-play"></span>
                 </span>
                 <div class="caption">
-                  <span class="meta">#7 / Forward</span>
-                  <h3 class="m-0">Garry Norris</h3>
+                  <h3 class="m-0">Kai Nets Double To Secure Comfortable Away Win</h3>
                 </div>
               </a>
             </div>
@@ -162,8 +363,7 @@
                   <span class="icon-play"></span>
                 </span>
                 <div class="caption">
-                  <span class="meta">#4 / Forward</span>
-                  <h3 class="m-0">Romolu Harper</h3>
+                  <h3 class="m-0">Romolu to stay at Real Nadrid?</h3>
                 </div>
               </a>
             </div>
@@ -177,8 +377,7 @@
                   <span class="icon-play"></span>
                 </span>
                 <div class="caption">
-                  <span class="meta">#4 / Forward</span>
-                  <h3 class="m-0">Phillip Hobbs</h3>
+                  <h3 class="m-0">Dogba set for Juvendu return?</h3>
                 </div>
               </a>
             </div>
@@ -191,8 +390,7 @@
                   <span class="icon-play"></span>
                 </span>
                 <div class="caption">
-                  <span class="meta">#1 / GoalKeeper</span>
-                  <h3 class="m-0">Garry Norris</h3>
+                  <h3 class="m-0">Kai Nets Double To Secure Comfortable Away Win</h3>
                 </div>
               </a>
             </div>
@@ -205,20 +403,18 @@
                   <span class="icon-play"></span>
                 </span>
                 <div class="caption">
-                  <span class="meta">#8 / Forward</span>
-                  <h3 class="m-0">Romolu Harper</h3>
+                  <h3 class="m-0">Romolu to stay at Real Nadrid?</h3>
                 </div>
               </a>
             </div>
           </div>
+
         </div>
 
       </div>
     </div>
 
-
-<!--     
-    <div class="container site-section">
+    <!-- <div class="container site-section">
       <div class="row">
         <div class="col-6 title-section">
           <h2 class="heading">Our Blog</h2>
@@ -252,59 +448,9 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
+ -->
 
-    <table>
-                            <thead>
-                                <tr>
-                                    <th>profile</th>
-                                    <th>Player ID</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Club1</th>
-                                    <th>Club2</th>
-                                    <th>Club3</th>
-                                    <th>matches</th>
-                                    <th>scores</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                include 'connect.php';
-
-                                $sql = "SELECT 
-                                           players_d.playerid, 
-                                           players_d.firstname, 
-                                           players_d.lastname, 
-                                           players_d.club1, 
-                                           players_d.club2, 
-                                           players_d.club3, 
-                                           player_score.mat, 
-                                           player_score.score
-                                           FROM players_d
-                                           INNER JOIN player_score ON players_d.playerid = player_score.playerid";
-
-                                $result = mysqli_query($conn, $sql);
-
-                                while ($row = mysqli_fetch_assoc($result)) {
-                                    echo "<tr>";
-                                    echo "<td>{$row['playerid']}</td>";
-                                    echo "<td>{$row['playerid']}</td>";
-                                    echo "<td>{$row['firstname']}</td>";
-                                    echo "<td>{$row['lastname']}</td>";
-                                    echo "<td>{$row['club1']}</td>";
-                                    echo "<td>{$row['club2']}</td>";
-                                    echo "<td>{$row['club3']}</td>";
-                                    echo "<td>{$row['mat']}</td>";
-                                    echo "<td>{$row['score']}</td>";
-                                    echo "</td>";
-                                    echo "</tr>";
-                                }
-
-                                mysqli_close($conn);
-                                ?>
-                            </tbody>
-                        </table>
 
     <footer class="footer-section">
       <div class="container">
@@ -321,6 +467,7 @@
               </ul> -->
             </div>
           </div>
+
           <!-- <div class="col-lg-3">
             <div class="widget mb-3">
               <h3>Tickets</h3>
@@ -369,8 +516,8 @@
                 Copyright &copy;
                 <script>
                   document.write(new Date().getFullYear());
-                </script> All rights reserved
-                <!-- <i class="icon-heart"
+                </script> All rights reserved 
+                <!-- | This template is made with <i class="icon-heart"
                   aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               </p>

@@ -117,7 +117,7 @@ th::after {
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li class="active"><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="matches.html" class="nav-link">Matches</a></li>
-                <li><a href="players.html" class="nav-link">Players</a></li>
+                <li><a href="players.php" class="nav-link">Players</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
               </ul>
             </nav>
