@@ -27,7 +27,24 @@
 
   <link rel="stylesheet" href="css/style.css">
 
+ <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
 
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 
 </head>
 
@@ -237,7 +254,57 @@
       </div>
     </div> -->
 
+    <table>
+                            <thead>
+                                <tr>
+                                    <th>profile</th>
+                                    <th>Player ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Club1</th>
+                                    <th>Club2</th>
+                                    <th>Club3</th>
+                                    <th>matches</th>
+                                    <th>scores</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                include 'connect.php';
 
+                                $sql = "SELECT 
+                                           players_d.playerid, 
+                                           players_d.firstname, 
+                                           players_d.lastname, 
+                                           players_d.club1, 
+                                           players_d.club2, 
+                                           players_d.club3, 
+                                           player_score.mat, 
+                                           player_score.score
+                                           FROM players_d
+                                           INNER JOIN player_score ON players_d.playerid = player_score.playerid";
+
+                                $result = mysqli_query($conn, $sql);
+
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo "<tr>";
+                                    echo "<td>{$row['playerid']}</td>";
+                                    echo "<td>{$row['playerid']}</td>";
+                                    echo "<td>{$row['firstname']}</td>";
+                                    echo "<td>{$row['lastname']}</td>";
+                                    echo "<td>{$row['club1']}</td>";
+                                    echo "<td>{$row['club2']}</td>";
+                                    echo "<td>{$row['club3']}</td>";
+                                    echo "<td>{$row['mat']}</td>";
+                                    echo "<td>{$row['score']}</td>";
+                                    echo "</td>";
+                                    echo "</tr>";
+                                }
+
+                                mysqli_close($conn);
+                                ?>
+                            </tbody>
+                        </table>
 
     <footer class="footer-section">
       <div class="container">
