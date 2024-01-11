@@ -29,11 +29,11 @@
 
   <style>
     .blink {
-        transition: opacity 0.5s ease-in-out; /* Add a smooth transition effect */
+        transition: opacity 5s ease-in-out; /* Add a smooth transition effect */
     }
 
     .blink:hover {
-        animation: blink 1s infinite;
+        animation: blink 3s infinite;
     }
 
     @keyframes blink {
@@ -160,7 +160,12 @@
               <div class="widget-next-match">
                   <div class="widget-title">
                       <div class="image-container">
-                          <a href="club1.php" class="blink"><img style="margin-left: 25%;" src="images/logo_1.png" alt="Image 1"></a>
+                          <a href="club1.php" class="blink">
+                              <div style="position: relative;">
+                                  <img style="margin-left: 25%;" src="images/logo_1.png" alt="Image 1">
+                                  <div style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 0); color: white; font-size: 18px; font-weight: bold;">Club 1</div>
+                              </div>
+                          </a>
                       </div>
                   </div>
               </div>
@@ -169,7 +174,12 @@
               <div class="widget-next-match">
                   <div class="widget-title">
                       <div class="image-container">
-                          <a href="club2.php" class="blink"><img style="margin-left: 25%;" src="images/logo_2.png" alt="Image 2"></a>
+                          <a href="club2.php" class="blink">
+                              <div style="position: relative;">
+                                  <img style="margin-left: 25%;" src="images/logo_2.png" alt="Image 2">
+                                  <div style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 0); color: white; font-size: 18px; font-weight: bold;">Club 2</div>
+                              </div>
+                          </a>
                       </div>
                   </div>
               </div>
@@ -178,13 +188,19 @@
               <div class="widget-next-match">
                   <div class="widget-title">
                       <div class="image-container">
-                          <a href="club3.php" class="blink"><img style="margin-left: 25%;" src="images/logo_3.png" alt="Image 3"></a>
+                          <a href="club3.php" class="blink">
+                              <div style="position: relative;">
+                                  <img style="margin-left: 25%;" src="images/logo_3.png" alt="Image 3">
+                                  <div style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 0); color: white; font-size: 18px; font-weight: bold;">Club 3</div>
+                              </div>
+                          </a>
                       </div>
                   </div>
               </div>
           </div>
       </div>
   </div>
+  
   
 
 
